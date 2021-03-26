@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.Master.cs" Inherits="Test.Ogretmen" %>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Araç Satış Veritabanı Sistemi</title>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+         <!-- Bootstrap CSS CDN -->
+        <link href="Dosyalar1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Our Custom CSS -->
+        <link href="Dosyalar1/StyleSheet2.css" rel="stylesheet" />
+    </head>
+    <body>
+
+
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Menü</h3>
+                    <strong>M</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-user"></i>
+                            Personeller
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="PersonelEkle.aspx"><i class="glyphicon glyphicon-plus"></i>Personel Ekle</a></li>
+                            <li><a href="Default.aspx"><i class="glyphicon glyphicon-search"></i>Personelleri Görüntüle</a></li>
+                        </ul>
+
+                    <li>
+                        <a href="Musteriler.aspx">
+                            <i class="glyphicon glyphicon-briefcase"></i>
+                            Müşteriler
+                        </a>
+                        
+                    </li>
+                        
+                        <li>
+                        <a href="Satislar.aspx">
+                            <i class="glyphicon glyphicon-tags"></i>
+                            Satışlar
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="Tedarikciler.aspx">
+                            <i class="glyphicon glyphicon-level-up"></i>
+                            Tedarikçiler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Arabalar.aspx">
+                            <i class="glyphicon glyphicon-plane"></i>
+                            Arabalar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-random"></i>
+                            Diğer
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+                
+
+           </div>
+        </div>
+
+
+
+
+        <!-- jQuery CDN -->
+        <script src="Dosyalar1/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+        <script src="Dosyalar1/js-bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+    </body>
+</html>
